@@ -1,0 +1,40 @@
+@mixin fontFace($font, $style, $weightNumber, $weightLetter) {
+  font-family: $font;
+  font-style: $style;
+  font-weight: $weightNumber;
+  src: url('./fonts/' + $font + '/' + $font + '-' + $weightLetter + '/' + $font + '-' + $weightLetter + '.eot'); /* IE9 Compat Modes */
+  src: local($font), local($font),
+       url('./fonts/' + $font + '/' + $font + '-' + $weightLetter + '/' + $font + '-' + $weightLetter + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/' + $font + '/' + $font + '-' + $weightLetter + '/' + $font + '-' + $weightLetter + '.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/' + $font + '/' + $font + '-' + $weightLetter + '/' + $font + '-' + $weightLetter + '.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/' + $font + '/' + $font + '-' + $weightLetter + '/' + $font + '-' + $weightLetter + '.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/' + $font + '/' + $font + '-' + $weightLetter + '/' + $font + '-' + $weightLetter + '.svg#' + $font + '') format('svg'); /* Legacy iOS */
+}
+
+// !***************!
+// OpenSans
+// !***************!
+// Normal
+@font-face {
+  @include fontFace('OpenSans', 'normal', 400, 'Regular')
+}
+
+// !**************!
+// Rubik
+// !**************!
+// Medium
+@font-face {
+  @include fontFace('Rubik', 'normal', 500, 'Medium')
+}
+
+// !**************!
+// TTNorms
+// !**************!
+// Bold
+@font-face {
+  @include fontFace('TTNorms', 'normal', 700, 'Bold')
+}
+// Extra Bbold
+@font-face {
+  @include fontFace('TTNorms', 'normal', 800, 'ExtraBold')
+}
