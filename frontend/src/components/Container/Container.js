@@ -2,8 +2,10 @@ import React from 'react'
 import './Container.scss'
 
 const Container = (props) => {
+  const containerClass = props.devClass ? "Container " + props.devClass : "Container"
+
   return (
-    <div className="Container">
+    <div className={containerClass}>
       { props.children }
     </div>
   )

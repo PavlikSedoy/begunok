@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import Container from '../Container/Container'
+import HeadNav from '../HeadNav/HeadNav'
 import './Header.scss'
 
 export default class Header extends Component {
@@ -11,8 +12,11 @@ export default class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <Container>
+        <div className="Header__bg"></div>
+        <HeadNav />
+        <Container devClass="Header__container">
           Header
+          <div className="Header__carBg"></div>
         </Container>
       </div>
     )

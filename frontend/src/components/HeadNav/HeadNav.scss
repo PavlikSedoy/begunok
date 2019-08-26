@@ -1,0 +1,53 @@
+@import '../../vars';
+
+.HeadNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  color: $whiteColor;
+  z-index: 5;
+  background: transparent;
+  font-family: $rubikFont;
+  font-weight: 500;
+
+  // Container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  // Logo
+  &__logo {
+    flex-basis: 200px;
+  }
+
+  // Nav Menu
+  &__nav {
+    flex-basis: calc(100% - 400px);
+  }
+
+  // Phone numbers
+  &__phone {
+    flex-basis: 200px;
+  }
+}
+
+// Navigation
+.Nav {
+  position: relative;
+
+  &__list {
+    display: inline-flex;
+    justify-content: space-between;
+    width: calc(100% - 15px);
+  }
+
+  &__item-link {
+    font-size: 14px;
+    color: $whiteColor;
+  }
+}
