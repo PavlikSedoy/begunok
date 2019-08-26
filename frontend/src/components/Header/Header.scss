@@ -18,11 +18,11 @@
 
   // Car Background
   &__carBg {
-    position: absolute;
-    background: 50% 50px / cover no-repeat url("../../images//backgrounds/header-auto.png");
+        position: absolute;
+    background: 50% - 20px /cover no-repeat url("../../images/backgrounds/header-auto.png");
     height: 580px;
-    width: 615px;
-    right: -210px;
+    width: 770px;
+    right: -280px;
     bottom: 0;
     z-index: 2;
   }
