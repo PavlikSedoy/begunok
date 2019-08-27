@@ -42,6 +42,8 @@
     right: 0;
     width: 200px;
     height: 40px;
+    overflow: hidden;
+    border-radius: 40px;
   }
 
   &__callbackBtn {
@@ -53,13 +55,34 @@
     color: $whiteColor;
     font-family: $rubikFont;
     transition: .3s ease;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0) rotate(45deg);
+      width: 200%;
+      height: 0;
+      // box-shadow: 0 0 0 0px rgba($whiteColor, .1);
+      transition: .3s cubic-bezier(.38,.28,.54,1.06);
+      // border-radius: 50%;
+      z-index: -1;
+      background: $whiteColor;
+    }
 
     &:hover {
-      background: $whiteColor;
+      // background: $whiteColor;
       color: $redTextColor;
 
       .HeadNav__callbackIcon svg path {
         fill: $redTextColor;
+      }
+
+      &:before {
+        // box-shadow: 0 0 0 100px $whiteColor;
+        height: 400%;
       }
     }
   }
