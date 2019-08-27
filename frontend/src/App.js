@@ -3,6 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 // Components
 import Header from './components/Header/Header'
+import Social from './components/Social/Social'
 // Style
 import './App.scss'
 
@@ -15,6 +16,7 @@ function App() {
         <meta name="description" content="Descriprion from Helmet" />
       </Helmet>
       <Header />
+      <Social />
     </>
   );
 }

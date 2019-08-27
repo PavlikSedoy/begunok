@@ -35,7 +35,7 @@
       right: 0;
       top: 0;
       height: 100%;
-      width: 230px;
+      width: 235px;
       background-color: $redBgColor;
     }
 
@@ -47,6 +47,185 @@
       width: 100%;
       height: 100%;
       background-color: $redBgColor;
+    }
+  }
+
+  // Content in Home Page
+  &__content {
+    padding-top: 120px;
+    padding-bottom: 70px;
+    max-width: 700px;
+    height: calc(100% - 190px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  // Title
+  &__title {
+    font-size: 50px;
+    color: $whiteColor;
+  }
+
+  // Description
+  &__description {
+    p {
+      color: $whiteColor;
+      font-size: 18px;
+      line-height: 1.94;
+    }
+
+    span {
+      color: $redTextColor;
+      font-weight: 700;
+    }
+  }
+
+  // Buttons
+  &__btnsWr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 70px;
+  }
+
+  // Request Button
+  &__requestBtnWr {
+    width: 300px;
+    height: 70px;
+    position: relative;
+  }
+
+  // Present Button
+  &__present {
+    position: relative;
+    width: 260px;
+    height: 40px;
+    margin-left: 50px;
+  }
+}
+
+// Request Button
+.RequestBtn {
+  width: 100%;
+  height: 100%;
+  background-color: darken($redBgColor, 5%);
+  border-radius: 40px;
+  font-family: $ttNormsFont;
+  font-weight: 700;
+  color: $whiteColor;
+  font-size: 22px;
+  letter-spacing: 2.2px;
+  transition: .3s ease;
+  position: relative;
+  z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      transition: .3s cubic-bezier(.38,.28,.54,1.06);
+      z-index: -1;
+      background: darken($redBgColor, 10%);
+    }
+
+    &:hover {
+      // color: $redTextColor;
+
+      &:before {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+  &__insideWr {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 40px;
+  }
+
+  &__shadow {
+    position: absolute;
+    width: 290px;
+    height: 62px;
+    opacity: 0.7;
+    border-radius: 40px;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    background-color: rgb(222, 43, 43);
+    top: 15px;
+    left: 5px;
+  }
+}
+
+// Present Button
+.PresentBtn {
+  width: 100%;
+  height: 100%;
+  font-family: $ttNormsFont;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: $whiteColor;
+  font-size: 22px;
+  position: relative;
+
+  &__wr {
+    overflow: hidden;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $redBgColor;
+  }
+
+  &:after {
+    left: 0;
+    transition: transform .5s ease .2s;
+  }
+
+  &:before {
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+  }
+
+  &:hover {
+    &:after {
+      transform: translateX(100%);
+      transition: transform .5s ease;
+    }
+
+    &::before {
+      transform: translateX(0);
+      transition: transform .5s ease .2s;
+    }
+  }
+
+  &__insideWr {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 22px;
+    margin-right: 13px;
+
+    svg {
+      width: 100%;
     }
   }
 }
