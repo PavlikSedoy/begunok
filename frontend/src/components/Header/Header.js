@@ -41,6 +41,14 @@ export default class Header extends Component {
               </div>
             </div>
           </div>
+          <div className="Header__moreBtn">
+            <a href="#d" className="MoreBtn">
+              <div class="c-scrolldown">
+                <div class="c-line"></div>
+              </div>
+              <span className="MoreBtn__text">подробнее</span>
+            </a>
+          </div>
           <div className="Header__carBg"></div>
         </Container>
       </div>

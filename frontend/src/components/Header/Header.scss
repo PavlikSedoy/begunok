@@ -103,6 +103,15 @@
     height: 40px;
     margin-left: 50px;
   }
+
+  // More button
+  &__moreBtn {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    width: 30px;
+    height: 120px;
+  }
 }
 
 // Request Button
@@ -226,6 +235,71 @@
 
     svg {
       width: 100%;
+    }
+  }
+}
+
+// More Button
+$line-height: 120px;
+$line-height-abs: -120px;
+
+.c-scrolldown {
+	width: 1px;
+	height: $line-height;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	.c-line {
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: linear-gradient(to bottom, rgba($whiteColor, 1) 50%, rgba($whiteColor, 0) 50%);
+		background-position: 0 $line-height-abs;
+    background-size: 100% 200%;
+		animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+	}
+}
+
+@keyframes scrolldown {
+	0%{
+		background-position: 0 $line-height-abs;
+	}
+	75% {
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 0 $line-height;
+	}
+}
+
+.MoreBtn {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  span {
+    position: absolute;
+    transform: rotate(-90deg);
+    font-family: $ttNormsFont;
+    font-weight: 700;
+    letter-spacing: 4.4px;
+    color: $whiteColor;
+    font-size: 11px;
+    left: -35px;
+    bottom: 60px;
+  }
+
+  &:hover {
+    .c-scrolldown {
+      .c-line {
+        background: linear-gradient(to bottom, rgba($redBgColor, 1) 50%, rgba($redBgColor, 0) 50%);
+        background-position: 0 $line-height-abs;
+		    background-size: 100% 200%;
+      }
     }
   }
 }
