@@ -43,8 +43,8 @@ export default class Header extends Component {
           </div>
           <div className="Header__moreBtn">
             <a href="#d" className="MoreBtn">
-              <div class="c-scrolldown">
-                <div class="c-line"></div>
+              <div className="c-scrolldown">
+                <div className="c-line"></div>
               </div>
               <span className="MoreBtn__text">подробнее</span>
             </a>
