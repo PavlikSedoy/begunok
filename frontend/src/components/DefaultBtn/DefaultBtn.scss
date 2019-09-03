@@ -1,0 +1,15 @@
+@import '../../vars';
+
+.DefaultBtn {
+  position: relative;
+  
+  &__wr {
+    position: relative;
+    background-color: $redBgColor;
+    color: $whiteColor;
+    border-radius: 40px;
+    padding: 20px 60px;
+    font: 500 22px/1 $rubikFont;
+    letter-spacing: 2.2px;
+  }
+}
