@@ -2,6 +2,108 @@
 
 .About {
   position: relative;
-  background-color: $sectionLightBg;
   padding-top: 150px;
+
+  &__content {
+    position: relative;
+  }
+
+  // Title and Description
+  &__titleAndDesc {
+    width: 50%;
+  }
+
+  &__titleAndDesc {
+    margin-top: 85px;
+  }
+
+  &__contentTitle {
+    font: 500 29px/1.4 $rubikFont;
+    color: $sectionTitleBlack;
+
+    span {
+      color: $redTextColor;
+    }
+  }
+
+  &__description {
+    color: $grayTextColor;
+    font-size: 16px;
+    line-height: 1.94;
+  }
+
+  // Video
+  &__videoWr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(50% - 30px);
+    background-color: $headerBg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Play button
+.playBtn {
+  position: relative;
+  
+  &__insideWr {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    align-items: center;
+  }
+  
+  &__btn {
+    width: $playBtnSize;
+    height: $playBtnSize;
+    display: block;
+    position: relative;
+    border: solid 4px $defaultPlayColor;
+    border-radius: 50%;
+    transition: .3s ease;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: calc( 50% - ( #{$triangleHeight} / 2 ));
+      left: calc(50% - ( #{$triangleWidth} / 2 ));
+      border-top: calc( #{$triangleHeight} / 2 ) solid transparent;
+      border-left: $triangleWidth solid $defaultTriangleColor;
+      border-bottom: calc( #{$triangleHeight} / 2 ) solid transparent;
+      transition: .3s ease;
+    }
+  }
+  
+  &__text {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    color: $defaultPlayColor;
+    transition: .3s ease;
+    font-family: $rubikFont;
+  }
+  
+  &__insideWr:hover {
+    cursor: pointer;
+    
+    .playBtn__btn {
+      border-color: $defaultTriangleColor;
+      
+      &:before {
+        border-left-color: $defaultPlayColor;
+      }
+    }
+    
+    .playBtn__text {
+      color: $defaultTriangleColor;
+    }
+  }
 }
