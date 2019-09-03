@@ -1,0 +1,45 @@
+@import '../../vars';
+
+.SectionTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  // Title number
+  &__number {
+    // Main property to section number
+    color: $sectionTitleWhite;
+    background-color: $redBgColor;
+    padding: 8px 16px 8px 0;
+    font: 900 21px/1 $rubikFont;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 500px;
+      height: 100%;
+      transform: translateX(-100%);
+      background-color: $redBgColor;
+    }
+  }
+
+  // Title text
+  &__title {
+    // Colors
+    &.black {
+      color: $sectionTitleBlack;
+    }
+    &.white {
+      color: $sectionTitleWhite;
+    }
+
+    // Main propery to title
+    font: 500 45px/1 $rubikFont;
+    margin: 0 0 0 35px;
+  }
+}
