@@ -10,6 +10,7 @@ import HeadNav from './components/HeadNav/HeadNav'
 import Why from './components/Why/Why'
 import FreeConsultation from './components/FreeConsultation/FreeConsultation'
 import How from './components/How/How'
+import Reviews from './components/Reviews/Reviews'
 // Style
 import './App.scss'
 
@@ -79,6 +80,7 @@ export default class App extends Component {
         <Why />
         <FreeConsultation />
         <How />
+        <Reviews />
       </>
     );
   }

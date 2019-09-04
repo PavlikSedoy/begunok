@@ -1,0 +1,21 @@
+@import '../../vars';
+
+.Reviews {
+  position: relative;
+
+  &__desc {
+    margin-top: 90px;
+  }
+
+  &__descTitle {
+    color: $whiteColor;
+    font-size: 29px;
+    margin-bottom: 25px;
+  }
+
+  &__descParagraph {
+    color: $sectionDarkText;
+    font-size: 16px;
+    line-height: 1.94;
+  }
+}
