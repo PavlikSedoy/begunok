@@ -11,6 +11,7 @@ import Why from './components/Why/Why'
 import FreeConsultation from './components/FreeConsultation/FreeConsultation'
 import How from './components/How/How'
 import Reviews from './components/Reviews/Reviews'
+import BestPrice from './components/BestPrice/BestPrice'
 // Style
 import './App.scss'
 
@@ -81,6 +82,7 @@ export default class App extends Component {
         <FreeConsultation />
         <How />
         <Reviews />
+        <BestPrice />
       </>
     );
   }
