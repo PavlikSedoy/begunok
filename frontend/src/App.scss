@@ -42,4 +42,9 @@ p {
 
 section {
   background-color: $sectionLightBg;
+  padding: 150px 0;
+
+  &.dark-section {
+    background-color: $sectionDarkBg;
+  }
 }
