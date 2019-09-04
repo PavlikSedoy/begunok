@@ -22,13 +22,11 @@ export default class App extends Component {
 
   handleScroll = () => {
     if ( window.pageYOffset === 0 && this.state.smallHeader === true ) {
-      console.log('<50')
       this.setState({
         smallHeader: false
       })     
       this.minimizeNav()
     } else if ( window.pageYOffset > 0 && this.state.smallHeader === false ) {
-      console.log('>50')
       this.setState({
         smallHeader: true
       })
@@ -44,13 +42,15 @@ export default class App extends Component {
       navTl
         .to('.HeadNav__callbackBtn span', .2, {alpha: 0})
         .to('.HeadNav__callbackBtn span', .01, {display: 'none'}, .2)
-        .to('.HeadNav__callback', .3, {width: 40}, .2)
-        .to('.HeadNav__callback', .3, {alpha: 0}, .5)
-        .to('.HeadNav__callback', .3, {position: 'fixed', bottom: 50, right: 50}, .8)
-        .to('.HeadNav__callback', .3, {alpha: 1}, .9)
+        .to('.HeadNav__callback', .3, {width: 40})
+        .to('.HeadNav__callback', .3, {alpha: 0}, .3)
+        .to('.HeadNav', .3, {background: 'rgba(31, 33, 42, 1)', height: 70}, .5)
+        .to('.HeadNav__callback', .3, {position: 'fixed', bottom: 50, right: 50}, .5)
+        .to('.HeadNav__callback', .3, {alpha: 1}, .8)
     } else {
       navTl
         .to('.HeadNav__callback', .3, {alpha: 0}, .2)
+        .to('.HeadNav', .3, {background: 'rgba(31, 33, 42, 0)', height: 120}, .5)
         .to('.HeadNav__callback', .3, {width: 220, position: 'absolute', bottom: '-25', right: 0}, .5)
         .to('.HeadNav__callback', .3, {alpha: 1}, .8)
         .to('.HeadNav__callbackBtn span', .01, {display: 'block'}, .3)
