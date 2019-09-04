@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
 import Container from '../Container/Container'
-import HeadNav from '../HeadNav/HeadNav'
 import './Header.scss'
 
 export default class Header extends Component {
@@ -13,7 +12,6 @@ export default class Header extends Component {
     return (
       <div className="Header">
         <div className="Header__bg"></div>
-        <HeadNav />
         <Container devClass="Header__container">
           <div className="Header__content">
             <h1 className="Header__title">Запчасти на японские авто от лучших поставщиков</h1>

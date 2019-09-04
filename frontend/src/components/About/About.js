@@ -1,5 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
+// Components
 import Container from '../Container/Container'
 import SectionTitle from '../SectionTitle/SectionTitle'
 import DefaultBtn from '../DefaultBtn/DefaultBtn'
@@ -43,10 +44,10 @@ function About(props) {
           </div>
         </Container>
         <div className="About__videoWr">
-          <div class="playBtn About__playBtn">
-            <button class="playBtn__insideWr">
-              <div class="playBtn__btn"></div>
-              <div class="playBtn__text">Смотреть видео</div>
+          <div className="playBtn About__playBtn">
+            <button className="playBtn__insideWr">
+              <div className="playBtn__btn"></div>
+              <div className="playBtn__text">Смотреть видео</div>
             </button>
           </div>
         </div>

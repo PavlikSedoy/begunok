@@ -14,7 +14,7 @@ function DefaultBtn(props) {
 }
 
 DefaultBtn.propTypes = {
-
+  children: PropTypes.string.isRequired
 }
 
 export default DefaultBtn

@@ -1,26 +1,76 @@
-import React from 'react'
+import React, { Component } from 'react'
 // Import Libs
 import { Helmet } from 'react-helmet'
+import { TimelineMax } from 'gsap'
 // Components
 import Header from './components/Header/Header'
 import Social from './components/Social/Social'
 import About from './components/About/About'
+import HeadNav from './components/HeadNav/HeadNav'
 // Style
 import './App.scss'
 
-function App() {
-  return (
-    <>
-      {/* Title and meta tags with Helmet */}
-      <Helmet>
-        <title>Title from Helmet Test</title>
-        <meta name="description" content="Descriprion from Helmet" />
-      </Helmet>
-      <Header />
-      <Social />
-      <About />
-    </>
-  );
-}
+export default class App extends Component {
 
-export default App;
+  state = {
+    smallHeader: false
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    if ( window.pageYOffset === 0 && this.state.smallHeader === true ) {
+      console.log('<50')
+      this.setState({
+        smallHeader: false
+      })     
+      this.minimizeNav()
+    } else if ( window.pageYOffset > 0 && this.state.smallHeader === false ) {
+      console.log('>50')
+      this.setState({
+        smallHeader: true
+      })
+      this.minimizeNav()
+    }
+  }
+
+  minimizeNav = () => {
+    // Gsap init
+    var navTl = new TimelineMax()
+
+    if (this.state.smallHeader) {
+      navTl
+        .to('.HeadNav__callbackBtn span', .2, {alpha: 0})
+        .to('.HeadNav__callbackBtn span', .01, {display: 'none'}, .2)
+        .to('.HeadNav__callback', .3, {width: 40}, .2)
+        .to('.HeadNav__callback', .3, {alpha: 0}, .5)
+        .to('.HeadNav__callback', .3, {position: 'fixed', bottom: 50, right: 50}, .8)
+        .to('.HeadNav__callback', .3, {alpha: 1}, .9)
+    } else {
+      navTl
+        .to('.HeadNav__callback', .3, {alpha: 0}, .2)
+        .to('.HeadNav__callback', .3, {width: 220, position: 'absolute', bottom: '-25', right: 0}, .5)
+        .to('.HeadNav__callback', .3, {alpha: 1}, .8)
+        .to('.HeadNav__callbackBtn span', .01, {display: 'block'}, .3)
+        .to('.HeadNav__callbackBtn span', .2, {alpha: 1}, .3)
+    }
+  }
+
+  render() {
+    return (
+      <>
+        {/* Title and meta tags with Helmet */}
+        <Helmet>
+          <title>Title from Helmet Test</title>
+          <meta name="description" content="Descriprion from Helmet" />
+        </Helmet>
+        <HeadNav />
+        <Header />
+        <Social />
+        <About />
+      </>
+    );
+  }
+}
