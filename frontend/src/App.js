@@ -42,6 +42,7 @@ export default class App extends Component {
       navTl
         .to('.HeadNav__callbackBtn span', .2, {alpha: 0})
         .to('.HeadNav__callbackBtn span', .01, {display: 'none'}, .2)
+        .to('.HeadNav__callbackBtn', .01, {borderColor: '#de2b2b'}, .2)
         .to('.HeadNav__callback', .3, {width: 40})
         .to('.HeadNav__callback', .3, {alpha: 0}, .3)
         .to('.HeadNav', .3, {background: 'rgba(31, 33, 42, 1)', height: 70}, .5)
@@ -54,6 +55,7 @@ export default class App extends Component {
         .to('.HeadNav__callback', .3, {width: 220, position: 'absolute', bottom: '-25', right: 0}, .5)
         .to('.HeadNav__callback', .3, {alpha: 1}, .8)
         .to('.HeadNav__callbackBtn span', .01, {display: 'block'}, .3)
+        .to('.HeadNav__callbackBtn', .01, {borderColor: '#fff'}, .3)
         .to('.HeadNav__callbackBtn span', .2, {alpha: 1}, .3)
     }
   }
