@@ -9,6 +9,7 @@ import About from './components/About/About'
 import HeadNav from './components/HeadNav/HeadNav'
 import Why from './components/Why/Why'
 import FreeConsultation from './components/FreeConsultation/FreeConsultation'
+import How from './components/How/How'
 // Style
 import './App.scss'
 
@@ -77,6 +78,7 @@ export default class App extends Component {
         <About />
         <Why />
         <FreeConsultation />
+        <How />
       </>
     );
   }

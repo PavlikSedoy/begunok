@@ -1,0 +1,72 @@
+@import '../../vars';
+
+.How {
+  position: relative;
+  padding-bottom: 440px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    background-color: $redBgColor;
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 95px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 100px) / 4);
+  }
+
+  &__itemIcon {
+    height: 120px;
+  }
+
+  &__itemTitle {
+    font-size: 21px;
+    color: $redTextColor;
+    margin-top: 35px;
+    margin-bottom: 18px;
+  }
+
+  &__itemDesc {
+    font-size: 16px;
+    color: $grayTextColor;
+    line-height: 1.94;
+  }
+
+  // Cars
+  &__threeCars {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+  }
+
+  &__car {
+    position: absolute;
+    bottom: 70px;
+    max-width: 50%;
+  }
+
+  &__blackCar {
+    left: 0;
+  }
+
+  &__whiteCar {
+    right: 0;
+  }
+
+  &__redCar {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+  }
+}
