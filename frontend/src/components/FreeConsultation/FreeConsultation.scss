@@ -1,0 +1,24 @@
+@import '../../vars';
+
+.FreeConsultation {
+  position: relative;
+  min-height: 270px;
+  padding: 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: $sectionDarkBg;
+  }
+
+  &__container {
+    position: relative;
+    border: 2px solid #ccc;
+    min-height: 270px;
+    background-color: rgba($whiteColor, .5);
+  }
+}
