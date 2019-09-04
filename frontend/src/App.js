@@ -34,6 +34,7 @@ export default class App extends Component {
     }
   }
 
+  // NavBar animation
   minimizeNav = () => {
     // Gsap init
     var navTl = new TimelineMax()

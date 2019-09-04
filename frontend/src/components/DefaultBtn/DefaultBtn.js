@@ -6,6 +6,7 @@ function DefaultBtn(props) {
   return (
     <button type="button" className="DefaultBtn">
       <div className="DefaultBtn__wr">
+        <div className="DefaultBtn__ripple"></div>
         <span className="DefaultBtn__text">{props.children}</span>
         <div className="DefaultBtn__shadow"></div>
       </div>
