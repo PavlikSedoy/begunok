@@ -4,6 +4,7 @@
   position: relative;
   min-height: 270px;
   padding: 0;
+  padding-bottom: 10px;
 
   &:before {
     content: '';
@@ -17,8 +18,46 @@
 
   &__container {
     position: relative;
-    border: 2px solid #ccc;
-    min-height: 270px;
+    // border: 2px solid #ccc;
+    height: 270px;
     background-color: rgba($whiteColor, .5);
+    background: 0 50%/100% auto no-repeat url('../../images/backgrounds/mazda-consult.jpg');
+    border-radius: 25px;
+    box-shadow: 0 4px 15px 0 rgba($blackColor, 0.5);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      border: 1px solid rgba($redTextColor, .4);
+      border-radius: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 35px;
+    color: $whiteColor;
+    margin: 0;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  &__from {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  &__input {
+    flex-basis: 500px;
+    margin-right: 30px;
+  }
+
+  &__button {
+    flex-basis: 410px;
   }
 }

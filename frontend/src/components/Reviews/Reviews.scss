@@ -18,4 +18,148 @@
     font-size: 16px;
     line-height: 1.94;
   }
+
+  // Slider
+  &__borderIphone {
+    background: 50% 50% / contain no-repeat url('../../images/Reviews/Iphone-border.png');
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 298px;
+    height: 550px;
+    // z-index: 2;
+  }
+
+  &__slider {
+    width: 100%;
+    height: 620px;
+    margin-top: 98px;
+    position: relative;
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      color: $whiteColor;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      // z-index: 1;
+    }
+
+    // .swiper-slide-active {
+    //   z-index: 3;
+    // }
+
+    .swiper-slide-prev {
+      justify-content: flex-end;
+
+      .Reviews__itemImg {
+        left: 130px;
+      }
+    }
+
+    .swiper-slide-next {
+      justify-content: flex-start;
+
+      .Reviews__itemImg {
+        right: 130px;
+        left: auto;
+      }
+    }
+
+    .swiper-slide-prev, .swiper-slide-next {
+      opacity: .6;
+    }
+
+    // Prev & next
+    .swiper-button-prev, .swiper-button-next {
+      width: 40px;
+      height: 40px;
+      background: none;
+      top: 45%;
+
+      &:hover {
+        .Reviews__sliderNavBtn {
+          background-color: $redBgColor;
+
+          svg path {
+            fill: $whiteColor;
+          }
+        }
+
+        .Reviews__sliderNavShadow {
+          opacity: 1;
+          top: 4px;
+        }
+      }
+    }
+
+    // Bullets
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: $whiteColor;
+      transition: .3s ease;
+      opacity: 1;
+
+      &:hover {
+        background-color: $redBgColor;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 20px;
+      background-color: $redBgColor;
+      border-radius: 30px;
+    }
+  }
+
+  // Prev & next button in slider
+  &__sliderNavShadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    opacity: 0.7;
+    border-radius: 50%;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    background-color: rgb(222, 43, 43);
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  &__sliderNavBtn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $whiteColor;
+    border-radius: 50%;
+    transition: .3s ease;
+
+    svg {
+      height: 6px;
+      width: 14px;
+
+      path {
+        transition: .3s ease;
+      }
+    }
+  }
+
+  // Image item
+  &__itemImg {
+    height: 490px;
+    position: absolute;
+    top: 12px;
+    left: 66px;
+  }
 }

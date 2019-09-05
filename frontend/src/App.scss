@@ -1,5 +1,6 @@
 @import './fonts';
 @import './vars';
+@import './swiper.min';
 
 // !********************!
 // General Rules
@@ -46,5 +47,62 @@ section {
 
   &.dark-section {
     background-color: $sectionDarkBg;
+  }
+}
+
+// Inputs
+.input {
+  &__wr {
+    position: relative;
+    height: 70px;
+
+    &.inFocus {
+      .input__placeholder {
+        transform: translateY(-20px) scale(.6);
+        transform-origin: left;
+        color: $redTextColor;
+      }
+
+      .input__icon svg path {
+        fill: $redTextColor;
+      }
+    }
+  }
+
+  &__input {
+    width: calc(100% - 80px);
+    height: 100%;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    padding: 0;
+    padding-left: 80px;
+    font: 19px $openSansFont;
+    color: $sectionTitleBlack;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 22px;
+    left: 80px;
+    font: 19px $openSansFont;
+    color: rgba($sectionTitleBlack, .7);
+    transition: scale .3s ease .3s, color .3s ease, transform .3s ease;
+    transform-origin: left;
+  }
+
+  &__icon {
+    width: 32px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg path {
+      transition:  .3s ease;
+    }
   }
 }
