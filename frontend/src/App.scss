@@ -89,6 +89,10 @@ section {
     color: rgba($sectionTitleBlack, .7);
     transition: scale .3s ease .3s, color .3s ease, transform .3s ease;
     transform-origin: left;
+
+    span {
+      color: $redTextColor;
+    }
   }
 
   &__icon {
