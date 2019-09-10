@@ -198,6 +198,28 @@ export default class Order extends Component {
               </div>
               {/* End input */}
 
+              <div className="input__wr Order__input input__textareaWr" id="carPartsWr">
+                <textarea
+                  className="input__input input__textarea"
+                  type="text"
+                  id="carPartsInput"
+                  onFocus={() => (this.inputFocusHandler('carPartsWr'))}
+                  onBlur={(e) => (this.inputBlurHandler(e, 'carPartsWr'))}
+                ></textarea>
+                <div
+                  className="input__placeholder"
+                  onClick={() => (this.placehodlerHandleClick('carPartsInput'))}
+                >
+                  Нужная запчасть (запчасти) <span>*</span>
+                </div>
+                <div className="input__icon input__textareaIcon">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22px" height="22px">
+                    <path fill="#1f212a" d="M19.9,11c0-1.5,0.8-2.8,2.1-3.5l-1.2-2l-1.2-2.1C19,3.8,18.3,4,17.6,4c-2.3,0-4.2-1.8-4.2-4H8.6 c0,2.2-1.9,4-4.2,4C3.7,4,3,3.9,2.4,3.5L0,7.5c1.3,0.7,2.1,2,2.1,3.5c0,1.5-0.8,2.8-2.1,3.5l2.4,4C3,18.1,3.7,18,4.4,18 c2.3,0,4.2,1.8,4.2,4h4.8c0-2.2,1.9-4,4.2-4c0.8,0,1.5,0.2,2.1,0.5l2.4-4C20.7,13.8,19.9,12.5,19.9,11z M11,16.6 c-2.5,0-4.7-1.6-5.5-3.7c-0.2-0.6-0.3-1.2-0.3-1.9c0-3.1,2.6-5.7,5.9-5.7c1.7,0,3.3,0.7,4.4,1.9c0.9,1,1.4,2.3,1.4,3.7 C16.9,14.1,14.2,16.6,11,16.6z M11,8c-1.7,0-3.1,1.3-3.1,3c0,1.7,1.4,3,3.1,3c1.7,0,3.1-1.3,3.1-3C14.1,9.3,12.7,8,11,8z M11,12.6 c-0.9,0-1.7-0.7-1.7-1.6s0.8-1.6,1.7-1.6s1.7,0.7,1.7,1.6S11.9,12.6,11,12.6z"/>
+                  </svg>
+                </div>
+              </div>
+              {/* End input */}
+
               <div className="Order__btnWr">
                 <DefaultBtn
                   padding={40}

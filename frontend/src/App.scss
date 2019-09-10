@@ -56,6 +56,11 @@ section {
     position: relative;
     height: 70px;
 
+    // for textarea
+    &.input__textareaWr {
+      height: 75px;
+    }
+
     &.inFocus {
       .input__placeholder {
         transform: translateY(-20px) scale(.6);
@@ -79,6 +84,11 @@ section {
     padding-left: 80px;
     font: 19px $openSansFont;
     color: $sectionTitleBlack;
+
+    &.input__textarea {
+      resize: none;
+      padding-top: 25px;
+    }
   }
 
   &__placeholder {
@@ -104,6 +114,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.input__textareaIcon {
+      align-items: flex-start;
+
+      svg {
+        margin-top: 25px;
+      }
+    }
 
     svg path {
       transition:  .3s ease;

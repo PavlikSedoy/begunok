@@ -16,7 +16,7 @@ import reviewsScreen from '../../images/Reviews/review.png'
 export default class Reviews extends Component {
 
   componentDidMount() {
-    var reviewsSlider = new Swiper('.swiper-container', {
+    const reviewsSlider = new Swiper('.swiper-container', {
       loop: true,
       slidesPerView: 3,
       centeredSlides: true,
