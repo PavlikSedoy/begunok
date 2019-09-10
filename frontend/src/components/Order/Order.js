@@ -55,6 +55,7 @@ export default class Order extends Component {
                   id="vinInput"
                   onFocus={() => (this.inputFocusHandler('vinWr'))}
                   onBlur={(e) => (this.inputBlurHandler(e, 'vinWr'))}
+                  required
                 />
                 <div
                   className="input__placeholder"
@@ -101,6 +102,7 @@ export default class Order extends Component {
                   id="phoneInput"
                   onFocus={() => (this.inputFocusHandler('phoneWr'))}
                   onBlur={(e) => (this.inputBlurHandler(e, 'phoneWr'))}
+                  required
                 />
                 <div
                   className="input__placeholder"
@@ -205,6 +207,7 @@ export default class Order extends Component {
                   id="carPartsInput"
                   onFocus={() => (this.inputFocusHandler('carPartsWr'))}
                   onBlur={(e) => (this.inputBlurHandler(e, 'carPartsWr'))}
+                  required
                 ></textarea>
                 <div
                   className="input__placeholder"
