@@ -5,8 +5,14 @@ import './DefaultBtn.scss'
 function DefaultBtn(props) {
 
   const { padding, buttonId } = props
+  const buttonType = props.buttonType ? props.buttonType : 'button'
+
   return (
-    <button type="button" className="DefaultBtn" id={buttonId}>
+    <button
+      type={buttonType}
+      className="DefaultBtn"
+      id={buttonId}
+    >
       <div
         className="DefaultBtn__wr"
         style={{padding: '20px ' + padding + 'px'}}

@@ -223,10 +223,19 @@ export default class Order extends Component {
               </div>
               {/* End input */}
 
+              <div className="input__checkboxBlock Order__checkbox">
+                <div className="input__ckeckboxWr">
+                  <input id="subscribe" type="checkbox" className="input__ckeckbox" />
+                  <div className="input__pseudoInput"></div>
+                </div>
+                <label className="input__checkboxText" for="subscribe">Я хочу получать акционные предложения</label>
+              </div>
+
               <div className="Order__btnWr">
                 <DefaultBtn
                   padding={40}
                   buttonId='sendOrder'
+                  buttonType='submit'
                 >
                   Оставить заявку
                 </DefaultBtn>
