@@ -226,7 +226,9 @@ export default class Order extends Component {
               <div className="input__checkboxBlock Order__checkbox">
                 <div className="input__ckeckboxWr">
                   <input id="subscribe" type="checkbox" className="input__ckeckbox" />
-                  <div className="input__pseudoInput"></div>
+                  <div className="input__pseudoInput">
+                    <div className="input__pseudoChecked"></div>
+                  </div>
                 </div>
                 <label className="input__checkboxText" for="subscribe">Я хочу получать акционные предложения</label>
               </div>
