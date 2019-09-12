@@ -243,6 +243,10 @@ export default class Order extends Component {
                 </DefaultBtn>
               </div>
             </form>
+
+            <div className="Order__contactsWr">
+              <h3 className="Order__contactsTitle">Или свяжитесь с нами<br/> удобным для вас способом</h3>
+            </div>
           </div>
         </Container>
       </section>
