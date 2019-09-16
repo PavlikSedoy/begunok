@@ -232,7 +232,7 @@ export default class Order extends Component {
                     <div className="input__pseudoChecked"></div>
                   </div>
                 </div>
-                <label className="input__checkboxText" for="subscribe">Я хочу получать акционные предложения</label>
+                <label className="input__checkboxText" htmlFor="subscribe">Я хочу получать акционные предложения</label>
               </div>
 
               <div className="Order__btnWr">
