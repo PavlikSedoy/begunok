@@ -3,9 +3,23 @@
 .Order {
   position: relative;
 
+  &__container {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: -120px;
+      width: 690px;
+      height: 1100px;
+      background: 50% 50% / contain no-repeat url('../../images/backgrounds/amortizators.png');
+    }
+  }
+
   &__content {
     margin-top: 90px;
-    max-width: 685px;
+    // max-width: 685px;
   }
 
   &__desc {
@@ -50,5 +64,100 @@
   &__contactsTitle {
     font-size: 21px;
     color: $whiteColor;
+  }
+
+  &__contactsRow {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  // Contact item
+  &__contactsItem {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &_icon {
+      width: 40px;
+      height: 40px;
+      background-color: $whiteColor;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &_phoneLink {
+      font-family: $rubikFont;
+      position: relative;
+      color: $whiteColor;
+      transition: .3s ease;
+      margin: 0 20px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: $redTextColor;
+        bottom: -5px;
+        left: 0;
+        transition: .3s ease;
+      }
+
+      &:hover {
+        color: $redTextColor;
+
+        &:before {
+          width: 100%;
+        }
+      }
+
+      // Line after first phone number link
+      &:first-child {
+        &:after {
+          content: '';
+          position: absolute;
+          right: -20px;
+          top: -8px;
+          height: 36px;
+          width: 1px;
+          background-color: $redBgColor;
+        }
+      }
+    }
+
+    &_emailLink, &_socialLink {
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &_socialLink {
+      svg path {
+        transition: .3s ease;
+      }
+
+      &:hover {
+        svg path {
+          fill: $redTextColor;
+        }
+      }
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
   }
 }
