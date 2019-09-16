@@ -13,6 +13,7 @@ import How from './components/How/How'
 import Reviews from './components/Reviews/Reviews'
 import BestPrice from './components/BestPrice/BestPrice'
 import Order from './components/Order/Order'
+import Faq from './components/Faq/Faq'
 // Style
 import './App.scss'
 
@@ -85,6 +86,7 @@ export default class App extends Component {
         <Reviews />
         <BestPrice />
         <Order />
+        <Faq />
       </>
     );
   }
