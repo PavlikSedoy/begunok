@@ -2,4 +2,103 @@
 
 .Faq {
   position: relative;
+
+  &__items {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 65px;
+  }
+
+  // Current item
+  &__item {
+    position: relative;
+    flex-basis: calc(50% - 15px);
+    margin-top: 30px;
+    box-shadow: 0 4px 15px 0 rgba($blackColor, 0.05);
+    border-radius: 45px;
+    background-color: $whiteColor;
+    align-self: flex-start;
+    height: 75px;
+    transition: .3s ease;
+
+    // When hover on Item
+    &:hover {
+      .Faq__item_contentTitle {
+        &:before, &:after {
+          background-color: $blackColor;
+        }
+
+        color: $redTextColor;
+      }
+    }
+
+    // &_content {
+    //   // margin: 21px 25px 30px 25px;
+    // }
+
+    &_contentTitle {
+      margin-left: 50px;
+      display: block;
+      position: relative;
+      padding: 25px;
+      font-family: $rubikFont;
+      color: $sectionTitleBlack;
+      font-weight: 500;
+      font-size: 21px;
+      transition: .3s ease;
+
+      // + & -
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background-color: $plusMinusColor;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .3s ease;
+      }
+
+      // +
+      &:after {
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+
+    &_contentText {
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.94;
+        color: $grayTextColor;
+      }
+
+      padding-bottom: 30px;
+      margin-left: 25px;
+      margin-right: 25px;
+      // display: none;
+      opacity: 0;
+      transition: .3s ease;
+    }
+
+    // When Item clicked
+    &.active {
+      // max-height: 100%;
+
+      & .Faq__item_contentText {
+        height: auto;
+        opacity: 1;
+        transition: .3s ease .3s;
+        // padding-bottom: 30px;
+      }
+
+      & .Faq__item_contentTitle:after {
+        transform: translateY(-50%) rotate(0);
+        background-color: $redTextColor;
+      }
+    }
+  }
 }
