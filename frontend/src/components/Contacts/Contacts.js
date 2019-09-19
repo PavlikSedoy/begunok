@@ -127,7 +127,7 @@ function Contacts(props) {
             </Container>
 
             <div className="Contacts__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.6801435897282!2d30.58898751573259!3d50.48429807948012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d03147316721%3A0xe008515e72be7966!2z0LHRg9C7LiDQn9C10YDQvtCy0LAsIDE5LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1568908123182!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.6801435897282!2d30.58898751573259!3d50.48429807948012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d03147316721%3A0xe008515e72be7966!2z0LHRg9C7LiDQn9C10YDQvtCy0LAsIDE5LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1568908123182!5m2!1sru!2sua" width="100%" height="100%" frameBorder="0" allowFullScreen=""></iframe>
             </div>
         </section>
     )
