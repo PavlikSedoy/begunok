@@ -15,6 +15,7 @@ import BestPrice from './components/BestPrice/BestPrice'
 import Order from './components/Order/Order'
 import Faq from './components/Faq/Faq'
 import Contacts from './components/Contacts/Contacts'
+import Footer from './components/Footer/Footer'
 // Style
 import './App.scss'
 
@@ -89,6 +90,7 @@ export default class App extends Component {
         <Order />
         <Faq />
         <Contacts />
+        <Footer />
       </>
     );
   }

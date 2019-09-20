@@ -1,0 +1,16 @@
+@import '../../vars';
+
+.Footer {
+    position: relative;
+    background-color: $sectionDarkBg;
+    padding: 30px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        color: rgba($whiteColor, .5);
+        font-family: $rubikFont;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
