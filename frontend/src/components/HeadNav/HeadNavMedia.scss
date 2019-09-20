@@ -1,0 +1,17 @@
+@import '../../vars';
+
+@media screen and (max-width: 1199px) {
+    .HeadNav {
+        &__phone {
+            display: none;
+        }
+
+        &__callback {
+            display: none;
+        }
+    }
+
+    .Nav {
+        display: none;
+    }
+}
