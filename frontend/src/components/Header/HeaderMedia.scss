@@ -4,10 +4,20 @@
     .Header {
 
         &__carBg {
-            height: 450px;
-            width: 500px;
-            right: -140px;
-            bottom: -100px;
+            height: 699px;
+            width: 720px;
+            right: -320px;
+            bottom: -160px;
+            background-size: contain;
+            background-position: 50px 0px;
+        }
+
+        &__requestBtnWr {
+            width: 270px;
+        }
+
+        &__content {
+            padding-left: 30px;
         }
     }
 }

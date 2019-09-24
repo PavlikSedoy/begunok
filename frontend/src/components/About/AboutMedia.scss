@@ -1,0 +1,11 @@
+@import '../../vars';
+
+@media screen and (max-width: 1199px) {
+  .About {
+    &__videoWr {
+      height: 60%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
