@@ -1,0 +1,9 @@
+@import '../../vars';
+
+@media screen and (max-width: 1199px) {
+  .Why {
+    &__bgImg {
+      width: 350px;
+    }
+  }
+}

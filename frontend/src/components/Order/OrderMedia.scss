@@ -1,0 +1,10 @@
+@import "../../vars";
+
+@media screen and (max-width: 1199px) {
+  .Order {
+    &__container::after {
+      right: -60px;
+      width: 520px;
+    }
+  }
+}

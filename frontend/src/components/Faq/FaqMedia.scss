@@ -1,0 +1,9 @@
+@import '../../vars';
+
+@media screen and (max-width: 1199px) {
+  .Faq {
+    &__item {
+      flex-basis: 100%;
+    }
+  }
+}

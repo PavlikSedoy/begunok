@@ -1,0 +1,20 @@
+@import '../../vars';
+
+@media screen and (max-width: 1199px) {
+  .Reviews {
+    &__itemImg {
+      height: 401px;
+      top: 11px;
+      left: 58px;
+    }
+
+    &__borderIphone {
+      width: 243px;
+      height: 450px;
+    }
+
+    &__slider {
+      height: 530px;
+    }
+  }
+}
